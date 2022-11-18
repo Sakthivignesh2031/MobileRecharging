@@ -11,6 +11,6 @@ import com.example.entity.Offers;
 public interface OfferRepository extends JpaRepository<Offers, Integer> {
 
 	
-	@Query(value = "select * from Offers o where o.operator_operatorId =:operatorId", nativeQuery = true)
+	@Query(value = "select * from Plans p where p.operatorid = operatorid", nativeQuery = true)
 	List<Offers> findByOperator(@Param("operatorId")int operator);
 }

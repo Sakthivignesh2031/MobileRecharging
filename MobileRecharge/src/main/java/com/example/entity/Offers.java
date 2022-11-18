@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,14 +14,16 @@ public class Offers {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "plan_id")
 	private int planId;
 	private String days;
+	@Column(name = "talk_time")
 	private String talkTime;
 	private String data;
 	private String price;
 
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "operatorId")
+	@JoinColumn(name = "operatorid")
 	private Operator operator;
 
 	public Offers() {

@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,8 +13,11 @@ public class Bill {
 	@Id
 	@GeneratedValue(generator = "t_id", strategy = GenerationType.SEQUENCE)
 	@SequenceGenerator(name = "t_id", initialValue = 100001, allocationSize = 1)
+	@Column(name = "transaction_id")
 	private Long transactionId;
+	@Column(name = "mobile_number")
 	private long mobileNumber;
+	@Column(name = "offer_id")
 	private int offerId;
 
 	public Bill() {

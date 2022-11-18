@@ -23,7 +23,7 @@
 				</div>
 				<div class="card-body">
 
-					<form action="">
+					<form action="showplan" method="post">
 						<label class="form-control-label">Enter your Mobile Number</label>
 						<input type="text" class="form-control"
 							placeholder="Mobile number" name="mobilenumber" maxlength="10" />
@@ -31,14 +31,14 @@
 						<label class="form-control-label">Select the Operator</label> 
 						
 						<select
-							name="operator" class="custom-select mb-3">
+							name="operator" id="operator" class="custom-select mb-3">
 							<option selected>Select Operator</option>
 							<option value="1">Airtel</option>
 							<option value="2">Jio</option>
 							<option value="3">Vi</option>
 						</select>
 						
-						<a class="btn btn-primary" href="plan">Submit</a>
+						<button class="btn btn-primary" value="Submit">Submit</button>
 
 					</form>
 
