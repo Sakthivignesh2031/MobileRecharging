@@ -23,7 +23,7 @@
 				</div>
 				<div class="card-body">
 
-					<form action="showplan" method="post">
+					<form action="showplan" method="get">
 						<label class="form-control-label">Enter your Mobile Number</label>
 						<input type="text" class="form-control"
 							placeholder="Mobile number" name="mobilenumber" maxlength="10" />

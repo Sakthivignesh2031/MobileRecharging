@@ -39,6 +39,7 @@
 						<table class="table table-bordered table-stripped">
 							<thead>
 								<tr>
+									<th>Select</th>
 									<th>planId</th>
 									<th>Days</th>
 									<th>talktime</th>
@@ -49,9 +50,9 @@
 
 							<%for(Offers offerList : offer){ %>
 
-							<form action="">
+							<form action="rechargebill" method="get">
 							<tr>
-								<td><input type="radio" name="planId"
+								<td><input type="radio"name="planId"
 									value="<%= offerList.getPlanId()%>"></td>
 								<td>
 									<% out.print(offerList.getPlanId()); %>
@@ -75,7 +76,7 @@
 
 						</table>
 
-						<input type="hidden" name="mobilenumber" value="mobileNumer">
+						<input type="hidden" name="mobilenumber" value= <%= mobileNo%>>
 						<button class="btn btn-primary">Submit</button>
 
 						</form>
